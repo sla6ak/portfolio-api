@@ -12,7 +12,7 @@ app.use('*', (req, res) => {
 });
 
 app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, '..', 'portfolio-app', 'build', 'index.html'));
+    res.sendFile(path.join(__dirname, '..', 'portfolioapp', 'build', 'index.html'));
 });
 
 app.use((err, req, res, next) => {

@@ -20,7 +20,7 @@ const optionCors = {
 };
 app.use(cors(optionCors));
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '..', '..', 'portfolio-app', 'build')));
+app.use(express.static(path.join(__dirname, '..', '..', 'portfolioapp', 'build')));
 app.use(express.static(path.join(__dirname, '..', 'photo'))); // localhost:5000/avatars/myPhoto.png;
 
 module.exports = app;

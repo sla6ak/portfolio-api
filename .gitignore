@@ -1,12 +1,11 @@
 /node_modules
-/portfolio-app/node_modules
+/portfolioapp/node_modules
 .env
 config.js
 npm.log
 npm.lock
 package-lock.json
 firebase-debug.log
-/node_modules
 /.pnp
 .pnp.js
 # testing
