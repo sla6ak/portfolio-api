@@ -1,14 +1,13 @@
 const path = require('path');
-const tempDir = path.join(__dirname, '..', 'tmp');
-const photoName = 'photoName';
-
 const multer = require('multer');
+const tempDir = path.join(__dirname, '..', 'tmp');
+
 const multerConfig = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, tempDir);
     },
     filename: (req, file, cb) => {
-        cb(null, photoName);
+        cb(null, file.originalname);
     },
     limits: { fileSize: 4096 },
 });

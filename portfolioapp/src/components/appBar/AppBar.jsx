@@ -1,8 +1,14 @@
 import UserMenu from '../userMenu/UserMenu';
 import { Container } from '../container/Container';
-import { Header, HeaderBox, Avatar, AvatarCircl, Geroy, GeroyName, Specialisation } from './AppBar.styled';
+import { Header, HeaderBox, Avatar, AvatarCircl, Geroy, GeroyName, Specialisation, AvatarBtn } from './AppBar.styled';
+import { useState } from 'react';
+import Modal from 'components/modal/Modal';
+import ModalAvatar from 'components/modalAvatar/ModalAvatar';
 
-const AppBar = () => {
+const AppBar = ({ mainInfo }) => {
+    const [modal, setModal] = useState(false);
+    const impg = `http://localhost:5000/avatar/${mainInfo?.img}.png`;
+
     return (
         <>
             <Header>
@@ -10,7 +16,27 @@ const AppBar = () => {
                     <HeaderBox>
                         <Geroy>
                             <AvatarCircl>
-                                <Avatar />
+                                <AvatarBtn
+                                    onClick={() => {
+                                        setModal(true);
+                                    }}
+                                >
+                                    <Avatar src={impg} />
+                                </AvatarBtn>
+                                {modal ? (
+                                    <Modal
+                                        onModalClose={() => {
+                                            setModal(false);
+                                        }}
+                                    >
+                                        <ModalAvatar
+                                            impg={impg}
+                                            onModalClose={() => {
+                                                setModal(false);
+                                            }}
+                                        />
+                                    </Modal>
+                                ) : null}
                             </AvatarCircl>
                             <div>
                                 <GeroyName>Влад Третьяк</GeroyName>

@@ -13,27 +13,32 @@ export const mainInfoAPI = createApi({
     tagTypes: ['info'],
     endpoints: builder => ({
         updateMainInfo: builder.mutation({
-            query: ({ param, upWork }) => ({
-                url: `/main/update/${param}`,
+            query: ({ upInfo }) => ({
+                url: `/main/update/`,
                 method: 'PATCH',
-                body: upWork,
-            }),
-            keepUnusedDataFor: 3,
-            invalidatesTags: ['info'],
-        }),
-        updateAvatar: builder.mutation({
-            query: ({ param, upWork }) => ({
-                url: `/main/photo${param}`,
-                method: 'PATCH',
-                body: upWork,
+                body: upInfo,
             }),
             keepUnusedDataFor: 3,
             invalidatesTags: ['info'],
         }),
 
+        updateAvatar: builder.mutation({
+            query: ({ formData }) => ({
+                url: `/main/avatars`,
+                method: 'POST',
+                headers: {
+                    Accept: 'application/json',
+                    'Content-Type': 'multipart/form-data',
+                    Boundary: 'ggfhhghfghfdfdgdfsdff',
+                },
+                body: formData,
+            }),
+            invalidatesTags: ['info'],
+        }),
+
         mainInfo: builder.query({
             query: () => ({
-                url: `/main/all`,
+                url: `/main/info`,
                 method: 'GET',
             }),
             keepUnusedDataFor: 3,

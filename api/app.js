@@ -4,8 +4,8 @@ const path = require('path');
 const routerTransaction = require('./routers/works.routes');
 const routerMain = require('./routers/mainInfo.routes');
 
-app.use('/works', routerTransaction);
 app.use('/main', routerMain);
+app.use('/works', routerTransaction);
 
 app.use('*', (req, res) => {
     res.status(404).json({ message: 'Not found try later' });
@@ -16,7 +16,7 @@ app.get('/', function (req, res) {
 });
 
 app.use((err, req, res, next) => {
-    const { status = 500, message = 'Server error' } = err;
+    const { status = 500, message = 'bed req' } = err;
     res.status(status).json({ message });
 });
 

@@ -18,8 +18,14 @@ export const HeaderBox = styled.div`
     }
 `;
 
-export const Avatar = styled.div`
-    background-color: #9b9b9b;
+export const Avatar = styled.img`
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+`;
+export const AvatarBtn = styled.button`
     width: 60px;
     height: 60px;
     border-radius: 50%;
@@ -34,6 +40,9 @@ export const AvatarCircl = styled.div`
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    :hover {
+        scale: 1.2;
+    }
 `;
 export const GeroyName = styled.div`
     font-size: 30px;

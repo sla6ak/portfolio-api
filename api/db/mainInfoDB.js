@@ -1,6 +1,6 @@
 const fs = require('fs/promises');
 const path = require('path');
-const infoPath = path.join(__dirname, './myWorks.json');
+const infoPath = path.join(__dirname, './mainInfo.json');
 
 const listInfo = async () => {
     const allInfoText = await fs.readFile(infoPath);
@@ -8,14 +8,20 @@ const listInfo = async () => {
     return allInfo || null;
 };
 
-const updateInfo = async (infoId, body) => {
+const updateInfo = async body => {
     const newInfo = { ...body };
 
     await fs.writeFile(infoPath, JSON.stringify(newInfo));
+    return newInfo;
+};
+const updateAva = async originalname => {
+    const info = await listInfo();
+    const newInfo = await fs.writeFile(infoPath, JSON.stringify({ ...info, img: originalname }));
     return newInfo;
 };
 
 module.exports = {
     listInfo,
     updateInfo,
+    updateAva,
 };

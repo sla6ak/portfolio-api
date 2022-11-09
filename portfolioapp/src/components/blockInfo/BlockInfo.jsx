@@ -3,16 +3,14 @@ import { BlokHeroy, HeroyText, BlokContacts, HeroyFlex } from './BlockInfo.style
 import { Container } from '../container/Container';
 import Contacts from 'components/contacts/Contacts';
 
-const BlockInfo = () => {
+const BlockInfo = ({ mainInfo }) => {
     return (
         <BlokHeroy>
             <Container>
                 <HeroyFlex>
-                    <HeroyText>
-                        Профессиональное продвижение <br /> сайтов в поиске Yandex и Google
-                    </HeroyText>
+                    <HeroyText>{mainInfo?.h1}</HeroyText>
                     <BlokContacts>
-                        <Contacts size={32} /> <div>кейсы</div>
+                        <Contacts mainInfo={mainInfo} size={32} /> <div>keys</div>
                     </BlokContacts>
                 </HeroyFlex>
             </Container>
