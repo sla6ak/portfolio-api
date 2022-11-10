@@ -1,5 +1,5 @@
 import React from 'react';
-import { ModalBackgr, TekstAv, BtAv, ShellInputs } from './ModalAvatar.styled';
+import { ModalBackgr, TekstAv, BtAv, ShellInputs, ImgS } from './ModalAvatar.styled';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import { toast } from 'react-toastify';
@@ -32,7 +32,7 @@ const ModalAvatar = ({ impg, onModalClose }) => {
 
     return (
         <ModalBackgr>
-            <img src={impg} alt="ava" />
+            <ImgS src={impg} alt="ava" />
             {admin ? (
                 <ShellInputs>
                     <TekstAv>Select square img please</TekstAv>
