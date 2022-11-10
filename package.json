@@ -6,9 +6,7 @@
     "scripts": {
         "start": "cross-env NODE_ENV=production node server",
         "dev": "cross-env NODE_ENV=development nodemon server",
-        "build": "react-scripts build",
-        "lint:back": "eslint --fix api/**/*.js",
-        "lint:front": "eslint --fix src/**/*.{js,jsx,tsx,ts}"
+        "lint:back": "eslint --fix api/**/*.js"
     },
     "repository": {
         "type": "git",
