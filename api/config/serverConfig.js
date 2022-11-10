@@ -21,7 +21,7 @@ const optionCors = {
 };
 app.use(cors(optionCors));
 app.use(express.json());
-app.use(favicon(path.join(__dirname, '..', '..', 'portfolioapp', 'build', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, '..', '..', 'portfolioapp', 'build')));
 app.use(express.static(path.join(__dirname, '..', '..', 'portfolioapp', 'build')));
 app.use('/avatar', express.static(path.join(__dirname, '..', 'photo'))); // localhost:5000/photoName.png;
 
