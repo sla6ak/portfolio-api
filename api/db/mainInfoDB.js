@@ -9,11 +9,12 @@ const listInfo = async () => {
 };
 
 const updateInfo = async body => {
-    const newInfo = { ...body };
-
+    const info = await listInfo();
+    const newInfo = { ...info, ...body };
     await fs.writeFile(infoPath, JSON.stringify(newInfo));
     return newInfo;
 };
+
 const updateAva = async originalname => {
     const info = await listInfo();
     const newInfo = await fs.writeFile(infoPath, JSON.stringify({ ...info, img: originalname }));
