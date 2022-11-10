@@ -4,10 +4,11 @@ import { Header, HeaderBox, Avatar, AvatarCircl, Geroy, GeroyName, Specialisatio
 import { useState } from 'react';
 import Modal from 'components/modal/Modal';
 import ModalAvatar from 'components/modalAvatar/ModalAvatar';
+import BASE_URL from 'redux/testURL';
 
 const AppBar = ({ mainInfo }) => {
     const [modal, setModal] = useState(false);
-    const impg = `http://localhost:5000/avatar/${mainInfo?.img}`;
+    const impg = `${BASE_URL}avatar/${mainInfo?.img}`;
 
     return (
         <>
