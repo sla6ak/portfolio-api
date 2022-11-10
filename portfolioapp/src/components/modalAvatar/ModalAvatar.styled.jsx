@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 
 export const ModalBackgr = styled.div`
-    background-color: #3f3f3f;
+    background-color: #686868;
     width: 100%;
     height: 100%;
     padding: 10px;
+    border-radius: 5px;
 `;
 export const ShellInputs = styled.div`
     width: 100%;

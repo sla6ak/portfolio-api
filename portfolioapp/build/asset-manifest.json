@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.1010c579.css",
-    "main.js": "/static/js/main.feb72a5b.js",
+    "main.js": "/static/js/main.a6878d32.js",
     "static/media/icons8-viber.svg": "/static/media/icons8-viber.afdde496aaa27d36c80d2114f65b3b65.svg",
     "static/media/whatsapp-svgrepo-com.svg": "/static/media/whatsapp-svgrepo-com.0e9d1475aeaf2fd8af65120d3c6f82fe.svg",
-    "static/media/icons8-telegram-app.svg": "/static/media/icons8-telegram-app.b0589b5e724dd92cc132ddb6a0e049d9.svg",
     "index.html": "/index.html",
+    "static/media/icons8-telegram-app.svg": "/static/media/icons8-telegram-app.b0589b5e724dd92cc132ddb6a0e049d9.svg",
     "main.1010c579.css.map": "/static/css/main.1010c579.css.map",
-    "main.feb72a5b.js.map": "/static/js/main.feb72a5b.js.map"
+    "main.a6878d32.js.map": "/static/js/main.a6878d32.js.map"
   },
   "entrypoints": [
     "static/css/main.1010c579.css",
-    "static/js/main.feb72a5b.js"
+    "static/js/main.a6878d32.js"
   ]
 }

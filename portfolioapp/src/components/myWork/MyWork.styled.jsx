@@ -71,6 +71,7 @@ export const PunctTask = styled.p`
     font-weight: 400;
     display: flex;
     margin-top: 5px;
+    font-family: 'Poor Story', cursive;
 `;
 export const LinkBox = styled.p`
     text-indent: 20px;
