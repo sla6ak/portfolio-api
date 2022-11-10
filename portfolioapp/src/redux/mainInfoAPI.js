@@ -13,10 +13,10 @@ export const mainInfoAPI = createApi({
     tagTypes: ['info'],
     endpoints: builder => ({
         updateMainInfo: builder.mutation({
-            query: ({ upInfo }) => ({
-                url: `/main/update/`,
-                method: 'PATCH',
-                body: upInfo,
+            query: ({ values }) => ({
+                url: `/main/info`,
+                method: 'PUT',
+                body: values,
             }),
             keepUnusedDataFor: 3,
             invalidatesTags: ['info'],
@@ -26,11 +26,6 @@ export const mainInfoAPI = createApi({
             query: ({ formData }) => ({
                 url: `/main/avatars`,
                 method: 'POST',
-                headers: {
-                    Accept: 'application/json',
-                    'Content-Type': 'multipart/form-data',
-                    Boundary: 'ggfhhghfghfdfdgdfsdff',
-                },
                 body: formData,
             }),
             invalidatesTags: ['info'],

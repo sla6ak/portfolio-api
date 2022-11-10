@@ -5,7 +5,6 @@ import { ButtonWrapper, ModalTitle, LogOutContainer, TitleAccent, ShowPasswordBt
 import { GeneralButton } from 'components/generalButton/GeneralButton.styled';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-
 import { TextField, InputAdornment, IconButton } from '@mui/material';
 import { Lock, Visibility, VisibilityOff } from '@mui/icons-material';
 const PASSVORD = '12345';

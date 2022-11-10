@@ -9,7 +9,7 @@ import ModalAddWork from 'components/modalAddWork/ModalAddWork';
 import { useAllWorksQuery } from 'redux/worksAPI';
 import Loader from 'components/loader/ Loader';
 
-const PortfolioBox = () => {
+const PortfolioBox = ({ mainInfo }) => {
     const [modal, setModal] = useState(false);
     const admin = useSelector(state => state.admin);
     const { data: allWorks } = useAllWorksQuery();
@@ -22,7 +22,7 @@ const PortfolioBox = () => {
                     {allWorks?.length > 0 ? (
                         <>
                             {allWorks.map((el, ind, arr) => (
-                                <MyWork key={el.id} work={el} />
+                                <MyWork key={el.id} work={el} mainInfo={mainInfo} />
                             ))}
                         </>
                     ) : (

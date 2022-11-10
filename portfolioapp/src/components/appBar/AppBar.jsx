@@ -7,7 +7,7 @@ import ModalAvatar from 'components/modalAvatar/ModalAvatar';
 
 const AppBar = ({ mainInfo }) => {
     const [modal, setModal] = useState(false);
-    const impg = `http://localhost:5000/avatar/${mainInfo?.img}.png`;
+    const impg = `http://localhost:5000/avatar/${mainInfo?.img}`;
 
     return (
         <>
@@ -39,8 +39,8 @@ const AppBar = ({ mainInfo }) => {
                                 ) : null}
                             </AvatarCircl>
                             <div>
-                                <GeroyName>Влад Третьяк</GeroyName>
-                                <Specialisation>seo-специалист</Specialisation>
+                                <GeroyName>{mainInfo?.name}</GeroyName>
+                                <Specialisation>{mainInfo?.special}</Specialisation>
                             </div>
                         </Geroy>
                         <UserMenu />

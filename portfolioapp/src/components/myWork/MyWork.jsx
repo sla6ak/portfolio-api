@@ -24,7 +24,7 @@ import { GeneralButton } from 'components/generalButton/GeneralButton.styled';
 import ModalDeleteWork from 'components/modalDeleteWork/ModalDeleteWork';
 import ModalEditWork from 'components/modalEditWork/ModalEditWork';
 
-const MyWork = ({ work }) => {
+const MyWork = ({ work, mainInfo }) => {
     const [modal, setModal] = useState(false);
     const [modalDel, setModalDel] = useState(false);
     const admin = useSelector(state => state.admin);
@@ -70,7 +70,7 @@ const MyWork = ({ work }) => {
                         </PunctTask>
                     );
                 })}
-                <Contacts size={21} />
+                <Contacts size={21} mainInfo={mainInfo} />
             </ResultWork>
             {admin ? (
                 <>

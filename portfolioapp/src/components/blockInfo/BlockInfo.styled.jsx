@@ -19,7 +19,9 @@ export const HeroyText = styled.h1`
     margin-bottom: 35px;
     @media (min-width: 768px) {
         font-size: 50px;
+        width: 80%;
         line-height: 1.3;
+        padding-left: 30px;
     }
 `;
 export const BlokContacts = styled.div`

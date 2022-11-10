@@ -11,10 +11,14 @@ const Contacts = ({ size, mainInfo }) => {
             <TelLink sx={{ ml: '5px' }} target="blank" href="https://t.me/vladlen_seo_service">
                 <Telegram width={size} height={size} />
             </TelLink>
-            <Viber width={size} height={size} />
-            <WatsUp width={size - 2} height={size - 2} />
+            <TelLink sx={{ ml: '5px' }} target="blank" href="#">
+                <Viber width={size} height={size} />
+            </TelLink>
+            <TelLink sx={{ ml: '5px' }} target="blank" href="#">
+                <WatsUp width={size - 2} height={size - 2} />
+            </TelLink>
 
-            <TelLink underline="none" target="blank" href={tel}>
+            <TelLink sx={{ ml: '5px' }} underline="none" target="blank" href={tel}>
                 <NumberT sizeSVG={size}>{mainInfo?.tel}</NumberT>
             </TelLink>
         </IconBox>

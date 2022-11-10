@@ -20,7 +20,7 @@ const ModalMainInfo = ({ onModalClose }) => {
         onSubmit: async values => {
             setDisabled(true);
             try {
-                const respons = await updateMainInfo(values);
+                const respons = await updateMainInfo({ values });
                 if (respons.error) {
                     toast.error(respons.error.data.message);
                     setDisabled(false);
@@ -76,7 +76,7 @@ const ModalMainInfo = ({ onModalClose }) => {
                     id="h1"
                     name="h1"
                     type="string"
-                    label="Heroy"
+                    label="Text heroy"
                     onChange={formik.handleChange}
                     value={formik.values.h1}
                     placeholder="do something"
