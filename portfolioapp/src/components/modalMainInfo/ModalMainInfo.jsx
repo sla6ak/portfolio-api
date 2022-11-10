@@ -5,6 +5,7 @@ import { useFormik } from 'formik';
 import { toast } from 'react-toastify';
 import { useUpdateMainInfoMutation } from 'redux/mainInfoAPI';
 import TextField from '@mui/material/TextField';
+import { updateMainInfo } from 'helpers/validationForm';
 
 const ModalMainInfo = ({ onModalClose }) => {
     const [disabled, setDisabled] = useState(false);
@@ -17,6 +18,7 @@ const ModalMainInfo = ({ onModalClose }) => {
             h1: '',
             tel: '',
         },
+        validationSchema: updateMainInfo,
         onSubmit: async values => {
             setDisabled(true);
             try {
